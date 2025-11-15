@@ -2,6 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException, Query as QueryParam
 from sqlalchemy.orm import Session
 from typing import Optional, List
 from app.database import get_db
+from app.models.query import Query
+
 from app.schemas.query import (
     QueryResponse,
     QueryListResponse,
