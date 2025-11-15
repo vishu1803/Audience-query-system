@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment System Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .panel {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .agent-card {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+        .agent-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .load-bar {
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .load-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #FFC107);
+            transition: width 0.3s;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 3px;
+        }
+        .danger {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Assignment System Dashboard</h1>
+    
+    <div style="margin-bottom: 20px;">
+        <button onclick="loadStats()">🔄 Refresh Stats</button>
+        <button onclick="batchAssign()">⚡ Batch Assign All</button>
+        <button onclick="checkEscalations()">🚨 Check Escalations</button>
+        <button onclick="loadAtRisk()">⚠️ Show At-Risk</button>
+    </div>
+    
+    <div class="container">
+        <div class="panel">
+            <h2>📊 Assignment Statistics</h2>
+            <div class="stat-grid" id="stats"></div>
+        </div>
+        
+        <div class="panel">
+            <h2>👥 Agent Workload</h2>
+            <div id="agents"></div>
+        </div>
+    </div>
+    
+    <div class="panel" style="margin-top: 20px;" id="alerts"></div>
+    
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        
+        async function loadStats() {
+            try {
+                const response = await fetch(`${API_BASE}/api/assignment/stats`);
+                const data = await response.json();
+                
+                // Display stats
+                const statsHtml = `
+                    <div class="stat-card">
+                        <div class="stat-value">${data.unassigned}</div>
+                        <div class="stat-label">Unassigned</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${data.by_team.support || 0}</div>
+                        <div class="stat-label">Support Team</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${data.by_team.engineering || 0}</div>
+                        <div class="stat-label">Engineering</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${data.by_team.sales || 0}</div>
+                        <div class="stat-label">Sales</div>
+                    </div>
+                `;
+                document.getElementById('stats').innerHTML = statsHtml;
+                
+                // Display agent workloads
+                const agentsHtml = data.agent_workloads.map(agent => {
+                    const loadPercent = (agent.active_tickets / 15) * 100;
+                    return `
+                        <div class="agent-card">
+                            <div class="agent-name">${agent.agent_name}</div>
+                            <div style="font-size: 12px; color: #666;">${agent.team} • ${agent.active_tickets} active tickets</div>
+                            <div class="load-bar">
+                                <div class="load-fill" style="width: ${loadPercent}%"></div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                document.getElementById('agents').innerHTML = agentsHtml || '<p>No agents with active tickets</p>';
+                
+            } catch (error) {
+                alert('Error loading stats: ' + error.message);
+            }
+        }
+        
+        async function batchAssign() {
+            try {
+                const response = await fetch(`${API_BASE}/api/assignment/batch-assign?limit=20`, {
+                    method: 'POST'
+                });
+                const data = await response.json();
+                
+                alert(`✅ Assigned ${data.assigned_count} queries`);
+                loadStats();
+                
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        }
+        
+        async function checkEscalations() {
+            try {
+                const response = await fetch(`${API_BASE}/api/assignment/check-escalations`, {
+                    method: 'POST'
+                });
+                const data = await response.json();
+                
+                const total = Object.values(data.escalated).reduce((sum, arr) => sum + arr.length, 0);
+                alert(`🚨 Escalated ${total} queries`);
+                loadStats();
+                
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        }
+        
+        async function loadAtRisk() {
+            try {
+                const response = await fetch(`${API_BASE}/api/assignment/at-risk`);
+                const data = await response.json();
+                
+                const alertsDiv = document.getElementById('alerts');
+                
+                if (data.approaching_sla.length === 0 && data.getting_stale.length === 0) {
+                    alertsDiv.innerHTML = '<h2>✅ No At-Risk Queries</h2><p>All queries are within acceptable timeframes.</p>';
+                    return;
+                }
+                
+                let html = '<h2>⚠️ At-Risk Queries</h2>';
+                
+                if (data.approaching_sla.length > 0) {
+                    html += '<h3>Approaching SLA Breach</h3>';
+                    data.approaching_sla.forEach(q => {
+                        html += `
+                            <div class="warning">
+                                <strong>Query #${q.query_id}</strong>: ${q.subject}<br>
+                                Priority: ${q.priority} • Time remaining: ${q.time_remaining_hours}h
+                            </div>
+                        `;
+                    });
+                }
+                
+                if (data.getting_stale.length > 0) {
+                    html += '<h3>Getting Stale</h3>';
+                    data.getting_stale.forEach(q => {
+                        html += `
+                            <div class="danger">
+                                <strong>Query #${q.query_id}</strong>: ${q.subject}<br>
+                                Status: ${q.status} • Time in status: ${q.hours_in_status}h
+                            </div>
+                        `;
+                    });
+                }
+                
+                alertsDiv.innerHTML = html;
+                
+            } catch (error) {
+                alert('Error loading at-risk queries: ' + error.message);
+            }
+        }
+        
+        // Load stats on page load
+        loadStats();
+    </script>
+</body>
+</html>

@@ -14,21 +14,29 @@ from app.services.ai_categorization import categorize_query  # Import AI service
 
 router = APIRouter()
 
-# Background task function
+# Updated the background task function
 async def process_query_background(query_id: int):
     """
-    Background task to categorize query with AI.
-    Runs after webhook response is sent to avoid blocking.
+    Background task to:
+    1. Categorize query with AI
+    2. Auto-assign to best agent
     """
     from app.database import SessionLocal
+    from app.services.assignment_service import AssignmentService
     
     db = SessionLocal()
     try:
+        # Step 1: Categorize
         await categorize_query(query_id, db)
+        
+        # Step 2: Auto-assign
+        AssignmentService.assign_query(db, query_id, auto=True)
+        
     except Exception as e:
-        print(f"❌ Background categorization failed for query {query_id}: {e}")
+        print(f"❌ Background processing failed for query {query_id}: {e}")
     finally:
         db.close()
+
 
 @router.post("/email", response_model=QueryResponse, status_code=201)
 async def receive_email_webhook(
