@@ -67,6 +67,16 @@ export interface CategoryAnalytics {
     avg_hours: number
   }>
 }
+// Add interface
+export interface User {
+  id: number
+  email: string
+  name: string
+  role: string
+  team: string
+  is_active: boolean
+  active_tickets: number
+}
 
 // API functions
 export const queriesApi = {
@@ -131,6 +141,21 @@ export const assignmentApi = {
   // Batch assign
   batchAssign: async (limit: number = 50) => {
     const { data } = await api.post(`/api/assignment/batch-assign?limit=${limit}`)
+    return data
+  },
+}
+
+// Add to exports
+export const usersApi = {
+  // Get all users
+  getUsers: async (): Promise<User[]> => {
+    const { data } = await api.get('/api/users')
+    return data
+  },
+
+  // Get single user
+  getUser: async (id: number): Promise<User> => {
+    const { data } = await api.get(`/api/users/${id}`)
     return data
   },
 }
