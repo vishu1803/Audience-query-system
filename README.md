@@ -6,30 +6,24 @@
 
 > **A unified platform that centralizes customer queries from multiple channels with AI-powered categorization and intelligent routing**
 
-[
-[
-[
-
-
 
 ***
 
 ## 📋 Table of Contents
 
-- [Problem Statement](../../../../Dropbox/PC/Downloads/give the read me file.md#problem-statement)
-- [Solution Overview](../../../../Dropbox/PC/Downloads/give the read me file.md#solution-overview)
-- [Key Features](../../../../Dropbox/PC/Downloads/give the read me file.md#key-features)
-- [Tech Stack](../../../../Dropbox/PC/Downloads/give the read me file.md#tech-stack)
-- [Architecture](../../../../Dropbox/PC/Downloads/give the read me file.md#architecture)
-- [Setup Instructions](../../../../Dropbox/PC/Downloads/give the read me file.md#setup-instructions)
-- [Deployment](../../../../Dropbox/PC/Downloads/give the read me file.md#deployment)
-- [API Documentation](../../../../Dropbox/PC/Downloads/give the read me file.md#api-documentation)
-- [Screenshots](../../../../Dropbox/PC/Downloads/give the read me file.md#screenshots)
-- [Technical Decisions](../../../../Dropbox/PC/Downloads/give the read me file.md#technical-decisions)
-- [Challenges Faced](../../../../Dropbox/PC/Downloads/give the read me file.md#challenges-faced)
-- [Future Enhancements](../../../../Dropbox/PC/Downloads/give the read me file.md#future-enhancements)
-- [Team](../../../../Dropbox/PC/Downloads/give the read me file.md#team)
-
+- [Problem Statement](#problem-statement)
+- [Solution Overview](#solution-overview)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
+- [Setup Instructions](#setup-instructions)
+- [Deployment](#deployment)
+- [API Documentation](#api-documentation)
+- [Screenshots](#screenshots)
+- [Technical Decisions](#technical-decisions)
+- [Challenges Faced](#challenges-faced)
+- [Future Enhancements](#future-enhancements)
+- [Team](#team)
 ***
 
 ## 🎯 Problem Statement
