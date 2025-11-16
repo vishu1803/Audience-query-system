@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { queriesApi } from '@/lib/api'
 import { Card } from '@/components/ui/card'
@@ -67,8 +67,12 @@ export default function InboxPage() {
         ...(filters.channel !== 'all' && { channel: filters.channel }),
       }),
     refetchInterval: 10000,
-    onSuccess: () => setLastUpdated(new Date()),
   })
+
+  // ⬇ FIX: Replace onSuccess with useEffect
+  useEffect(() => {
+    if (data) setLastUpdated(new Date())
+  }, [data])
 
   const totalPages = Math.ceil((data?.total || 0) / 20)
 
@@ -100,7 +104,6 @@ export default function InboxPage() {
       {/* Filters */}
       <Card className="p-4">
         <div className="flex gap-4 flex-wrap">
-
           {/* Status Filter */}
           <Select
             value={filters.status}
@@ -273,7 +276,6 @@ export default function InboxPage() {
   )
 }
 
-/* Channel Icon */
 function ChannelIcon({ channel }: { channel: string }) {
   const Icon = CHANNEL_ICONS[channel as keyof typeof CHANNEL_ICONS] || Mail
   return (
@@ -283,7 +285,6 @@ function ChannelIcon({ channel }: { channel: string }) {
   )
 }
 
-/* Skeleton Loader */
 function TableSkeleton() {
   return (
     <Card>
