@@ -306,10 +306,10 @@ curl -X POST "http://localhost:8000/api/webhooks/email" \
 
 ### Production URLs
 
-- **Frontend**: https://your-app.vercel.app
-- **Backend API**: https://your-api.onrender.com
-- **API Docs**: https://your-api.onrender.com/docs
-
+- **Frontend**: [https://your-app.vercel.app](https://audience-query-system.vercel.app/)
+- **Backend API**: [https://your-api.onrender.com](https://audience-query-api.onrender.com/)
+- **API Docs**: [https://your-api.onrender.com/docs
+](https://audience-query-api.onrender.com/docs)
 
 ### Deployment Steps
 
