@@ -540,11 +540,6 @@ Full interactive documentation: Visit `/docs` on your backend URL
 - GitHub: [@your-username](https://github.com/your-username)
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
 
-***
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](../../../../Dropbox/PC/Downloads/LICENSE) file for details.
 
 ***
 
