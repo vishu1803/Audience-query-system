@@ -558,7 +558,7 @@ Full interactive documentation: Visit `/docs` on your backend URL
 
 For questions, feedback, or support:
 
-- **Email**: your.email@example.com
+- **Email**: vishwanatnishad@gmail.com 
 - **GitHub Issues**: [Report a bug](https://github.com/your-username/audience-query-system/issues)
 - **Demo**: [Watch Demo Video](../../../../Dropbox/PC/Downloads/your-demo-video-link)
 
