@@ -568,7 +568,7 @@ For questions, feedback, or support:
 
 **Built with ❤️ for the Hackathon**
 
-⭐ Star this repo if you find it useful!
+
 
 </div>
 
