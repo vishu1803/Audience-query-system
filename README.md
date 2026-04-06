@@ -543,14 +543,7 @@ Full interactive documentation: Visit `/docs` on your backend URL
 
 ***
 
-## 🙏 Acknowledgments
 
-- OpenAI for GPT-4o-mini API
-- Vercel for Next.js and hosting
-- Render for backend hosting
-- Supabase for PostgreSQL database
-- shadcn/ui for beautiful components
-- FastAPI community for excellent documentation
 
 ***
 
