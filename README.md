@@ -555,12 +555,6 @@ For questions, feedback, or support:
 - **GitHub Issues**: [Report a bug](https://github.com/vishu1803/audience-query-system/issues)
 - **Demo**: [Watch Demo Video](../../../../Dropbox/PC/Downloads/your-demo-video-link)
 
-***
-
-<div align="center">
-
-**Built with ❤️ for the Hackathon**
-
 
 
 </div>
