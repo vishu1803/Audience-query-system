@@ -532,9 +532,7 @@ Full interactive documentation: Visit `/docs` on your backend URL
 
 ***
 
-## 👥 Team
 
-**[Your Name]**
 
 - Full-Stack Developer
 - GitHub: [@your-username](https://github.com/your-username)
