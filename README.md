@@ -545,17 +545,5 @@ Full interactive documentation: Visit `/docs` on your backend URL
 
 ***
 
-## 📞 Contact \& Support
 
-For questions, feedback, or support:
-
-- **Email**: vishwanatnishad@gmail.com 
-- **GitHub Issues**: [Report a bug](https://github.com/vishu1803/audience-query-system/issues)
-- **Demo**: [Watch Demo Video](../../../../Dropbox/PC/Downloads/your-demo-video-link)
-
-
-
-</div>
-
-***
 
