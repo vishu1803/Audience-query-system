@@ -530,16 +530,7 @@ Full interactive documentation: Visit `/docs` on your backend URL
 - **Test Queries Processed**: 100+
 - **AI Categorization Accuracy**: 95%+
 
-***
 
-
-
-- Full-Stack Developer
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
-
-
-***
 
 
 
