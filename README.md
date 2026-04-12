@@ -1,9 +1,5 @@
-
-
 ***
-
 # 🎯 Audience Query Management \& Response System
-
 > **A unified platform that centralizes customer queries from multiple channels with AI-powered categorization and intelligent routing**
 
 
