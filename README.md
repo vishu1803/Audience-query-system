@@ -20,7 +20,6 @@
 ***
 
 ## 🎯 Problem Statement
-
 Brands receive thousands of messages across email, social media, chat, and community platforms. Many queries are lost or delayed, leading to:
 
 - ❌ Dissatisfied customers
@@ -32,7 +31,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 ***
 
 ## 💡 Solution Overview
-
 **QueryHub** is an intelligent, unified inbox that consolidates all audience queries from multiple channels into a single dashboard with:
 
 ✅ **Multi-Channel Integration** - Email, Chat, Twitter, Instagram, Facebook
