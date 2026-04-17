@@ -197,9 +197,7 @@ External Services:
 - PostgreSQL (or Supabase account)
 - OpenAI API key
 
-
 ### 1️⃣ Clone the Repository
-
 ```bash
 # Clone frontend
 git clone https://github.com/YOUR_USERNAME/audience-query-frontend.git
@@ -209,8 +207,6 @@ cd audience-query-frontend
 git clone https://github.com/YOUR_USERNAME/audience-query-backend.git
 cd audience-query-backend
 ```
-
-
 ### 2️⃣ Backend Setup
 
 ```bash
