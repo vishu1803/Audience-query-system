@@ -246,9 +246,7 @@ uvicorn app.main:app --reload --port 8000
 
 Backend will be available at: http://localhost:8000
 API Documentation: http://localhost:8000/docs
-
 ### 3️⃣ Frontend Setup
-
 ```bash
 cd frontend
 
@@ -263,9 +261,7 @@ EOF
 # Start development server
 npm run dev
 ```
-
 Frontend will be available at: http://localhost:3000
-
 ### 4️⃣ Test the Application
 
 1. Open http://localhost:3000
