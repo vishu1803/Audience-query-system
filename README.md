@@ -124,8 +124,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - **Authentication**: JWT (python-jose)
 - **AI/ML**: OpenAI GPT-4o-mini
 - **Validation**: Pydantic
-
-
 ### **Infrastructure**
 
 - **Frontend Hosting**: Vercel
