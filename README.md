@@ -39,7 +39,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 ✅ **Analytics Dashboard** - Comprehensive insights into query patterns and team performance
 
 ***
-
 ## 🚀 Key Features
 
 ### 1️⃣ **Unified Inbox**
@@ -48,8 +47,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - Advanced filtering by status, priority, channel, and category
 - Paginated table view with real-time updates
 - Quick actions for status updates and assignment
-
-
 ### 2️⃣ **AI-Powered Categorization**
 
 - **Automatic Category Detection**: Question, Request, Complaint, Feedback, Bug Report
