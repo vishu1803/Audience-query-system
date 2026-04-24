@@ -110,8 +110,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - **Charts**: Recharts
 - **HTTP Client**: Axios
 - **Notifications**: Sonner (toast notifications)
-
-
 ### **Backend**
 
 - **Framework**: FastAPI (Python)
