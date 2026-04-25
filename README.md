@@ -53,10 +53,7 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - **Priority Detection**: Urgent, High, Medium, Low (based on content analysis)
 - **Auto-Tagging**: Extracts relevant topics (billing, technical, account, etc.)
 - **Hybrid Approach**: AI + rule-based fallback for 100% reliability
-
-
 ### 3️⃣ **Intelligent Assignment \& Routing**
-
 - **Team-Based Routing**: Routes queries to appropriate team (Support, Engineering, Sales, Finance)
 - **Load Balancing**: Distributes queries evenly across agents
 - **Capacity Management**: Prevents agent overload with configurable limits
