@@ -3,7 +3,6 @@
 > **A unified platform that centralizes customer queries from multiple channels with AI-powered categorization and intelligent routing**
 ***
 ## 📋 Table of Contents
-
 - [Problem Statement](#problem-statement)
 - [Solution Overview](#solution-overview)
 - [Key Features](#key-features)
