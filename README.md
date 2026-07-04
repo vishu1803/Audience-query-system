@@ -19,7 +19,6 @@
 ***
 ## 🎯 Problem Statement
 Brands receive thousands of messages across email, social media, chat, and community platforms. Many queries are lost or delayed, leading to:
-
 - ❌ Dissatisfied customers
 - ❌ Missed business opportunities
 - ❌ Overwhelmed support teams
