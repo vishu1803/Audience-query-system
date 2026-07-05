@@ -28,7 +28,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 ***
 ## 💡 Solution Overview
 **QueryHub** is an intelligent, unified inbox that consolidates all audience queries from multiple channels into a single dashboard with:
-
 ✅ **Multi-Channel Integration** - Email, Chat, Twitter, Instagram, Facebook
 ✅ **AI-Powered Categorization** - Automatic priority and category detection using GPT-4
 ✅ **Smart Routing** - Load-balanced team assignment based on expertise and workload
