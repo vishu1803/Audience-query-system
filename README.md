@@ -56,7 +56,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - **Capacity Management**: Prevents agent overload with configurable limits
 - **Auto-Assignment**: Instant assignment after categorization
 
-
 ### 4️⃣ **Escalation Management**
 
 - **SLA Monitoring**: Tracks response time against defined SLAs
