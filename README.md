@@ -24,7 +24,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - ❌ Overwhelmed support teams
 - ❌ Inconsistent response times
 - ❌ Poor visibility into query patterns
-
 ***
 ## 💡 Solution Overview
 **QueryHub** is an intelligent, unified inbox that consolidates all audience queries from multiple channels into a single dashboard with:
