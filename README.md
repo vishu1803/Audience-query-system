@@ -37,7 +37,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 ***
 ## 🚀 Key Features
 ### 1️⃣ **Unified Inbox**
-
 - Centralized view of all queries from multiple channels
 - Advanced filtering by status, priority, channel, and category
 - Paginated table view with real-time updates
