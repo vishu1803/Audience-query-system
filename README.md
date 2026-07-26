@@ -85,7 +85,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - **Response Time Metrics** - Average response time by priority
 - **Top Tags** - Most common query topics
 - **Team Performance** - Agent workload comparison
-
 ***
 
 ## 🛠️ Tech Stack
