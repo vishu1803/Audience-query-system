@@ -33,7 +33,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 ✅ **Real-Time Notifications** - Instant alerts for urgent queries
 ✅ **SLA Monitoring** - Automatic escalation for delayed responses
 ✅ **Analytics Dashboard** - Comprehensive insights into query patterns and team performance
-
 ***
 ## 🚀 Key Features
 ### 1️⃣ **Unified Inbox**
