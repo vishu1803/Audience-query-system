@@ -59,7 +59,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - **At-Risk Alerts**: Warns before escalation is needed
 
 ### 5️⃣ **Team Management**
-
 - View all agents grouped by team
 - Real-time workload tracking per agent
 - Capacity visualization with progress bars
