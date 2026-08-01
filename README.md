@@ -64,7 +64,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - Capacity visualization with progress bars
 - Team statistics and performance metrics
 
-
 ### 6️⃣ **Real-Time Notifications**
 
 - Toast notifications for new queries
