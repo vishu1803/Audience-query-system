@@ -81,7 +81,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - **Top Tags** - Most common query topics
 - **Team Performance** - Agent workload comparison
 ***
-
 ## 🛠️ Tech Stack
 ### **Frontend**
 
