@@ -83,7 +83,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 ***
 ## 🛠️ Tech Stack
 ### **Frontend**
-
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
