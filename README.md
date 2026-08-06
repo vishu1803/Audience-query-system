@@ -182,7 +182,6 @@ git clone https://github.com/YOUR_USERNAME/audience-query-backend.git
 cd audience-query-backend
 ```
 ### 2️⃣ Backend Setup
-
 ```bash
 cd backend
 
