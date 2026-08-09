@@ -71,7 +71,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - Notification dropdown with counts
 - Click-through to filtered views
 
-
 ### 7️⃣ **Analytics Dashboard**
 
 - **Queries by Category** - Pie chart visualization
