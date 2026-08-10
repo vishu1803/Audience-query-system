@@ -105,7 +105,6 @@ Brands receive thousands of messages across email, social media, chat, and commu
 - **Backend Hosting**: Render
 - **Database**: Supabase (Free PostgreSQL)
 - **Version Control**: GitHub
-
 ***
 
 ## 🏗️ Architecture
