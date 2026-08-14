@@ -182,7 +182,6 @@ cd audience-query-backend
 ### 2️⃣ Backend Setup
 ```bash
 cd backend
-
 # Create virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
